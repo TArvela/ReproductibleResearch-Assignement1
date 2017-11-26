@@ -39,7 +39,7 @@ hist(stepspday$x,col="red",  breaks=7, main ="Steps per Day",xlab="Steps per Day
 invisible(dev.off())
 ```
 
-![Histogram](plot1.png) 
+![Histogram](Figure/plot1.png) 
 
 
 
@@ -54,7 +54,7 @@ invisible(dev.off())
 High_Interval <- steps_interval$interval[which(steps_interval$steps == max(steps_interval$steps))]
 ```
 
-![Daily activity pattern](plot2.png) 
+![Daily activity pattern](Figure/plot2.png) 
 
 The most popular `Interval` is `r High_Interval`.
 
@@ -88,7 +88,7 @@ hist(stepspday$x,col="red",  breaks=7, main = paste("Total Steps Each Day"),xlab
 legend("topright", c("Imputed", "Non-imputed"), col=c("blue", "red"), lwd=10)
 invisible(dev.off())
 ```
-![Daily activity pattern](plot3.png) 
+![Daily activity pattern](Figure/plot3.png) 
 
 
 Stats comparison
@@ -129,4 +129,4 @@ png("plot4.png", width=480, height=480)
 xyplot(steps_interval2$steps ~ steps_interval2$interval|steps_interval2$wd, main="Average Steps per Day by Interval",xlab="Interval", ylab="Steps",layout=c(1,2), col="black", type="l")
 invisible(dev.off())
 ```
-![Weekdays vs Weekends activity patterns](plot4.png) 
+![Weekdays vs Weekends activity patterns](Figure/plot4.png) 
